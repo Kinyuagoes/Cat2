@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Control Portal | Environment</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/dist/min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-luxury sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center fw-bold" href="index.html" style="color: var(--gold-primary);"><i class="bi bi-suit-diamond me-2"></i>COINKEEPER</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Experiences</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="features.html">Ritual</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Insights</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="dashboard-preview.html">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html">Faq</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Visit</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-5 py-5">
+        <div class="row g-5">
+            <div class="col-md-5">
+                <div class="card-luxury p-4">
+                    <h3 class="h4 mb-4 fw-normal" style="color: var(--olive-dark);"><i class="bi bi-sliders me-2"></i>Balance Modeler</h3>
+                    <div class="mb-3">
+                        <label class="form-label small fw-bold">Inflow Yield Magnitude ($)</label>
+                        <input type="number" class="form-control bg-light" id="calcIncome" value="6000">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label small fw-bold">Fixed Variable Attrition ($)</label>
+                        <input type="number" class="form-control bg-light" id="calcExpenses" value="3400">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label small fw-bold">Targeted Reserve Goal ($)</label>
+                        <input type="number" class="form-control bg-light" id="calcGoal" value="15000">
+                    </div>
+                    <button id="calcBtn" class="btn btn-gold w-100 mt-2">Evaluate Trajectory</button>
+                    <div id="calcFeedback" class="alert d-none mt-3"></div>
+                </div>
+            </div>
+
+            <div class="col-md-7">
+                <div class="card-luxury p-4">
+                    <h3 class="h4 mb-4 fw-normal" style="color: var(--olive-dark);"><i class="bi bi-hdd-network me-2"></i>Isolated Ledger Activity</h3>
+                    <table class="table align-middle">
+                        <thead>
+                            <tr class="small text-uppercase text-muted">
+                                <th>Timestamp</th>
+                                <th>Allocation Description</th>
+                                <th class="text-end">Magnitude Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>June 18, 2026</td><td>Private Portfolio Distribution</td><td class="text-end text-success fw-bold">+$5,000.00</td></tr>
+                            <tr><td>June 15, 2026</td><td>Nairobi Office Leasings</td><td class="text-end text-danger">-$1,200.00</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer style="background-color: var(--spa-charcoal);" class="py-4 text-center text-white-50">
+        <p class="small mb-0">&copy; 2026 CoinKeeper Platform.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/dist/min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
