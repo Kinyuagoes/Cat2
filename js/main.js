@@ -1,104 +1,68 @@
 document.addEventListener("DOMContentLoaded", function () {
-
+    
     const themeToggleBtn = document.getElementById("themeToggleBtn");
-    const themeIcon = themeToggleBtn ? themeToggleBtn.querySelector("i") : null;
-
-    if (localStorage.getItem("theme") === "dark") {
-        document.body.classList.add("dark-mode");
-        if (themeIcon) {
-            themeIcon.classList.replace("bi-moon-stars-fill", "bi-sun-fill");
-        }
-    }
-
     if (themeToggleBtn) {
         themeToggleBtn.addEventListener("click", function () {
             document.body.classList.toggle("dark-mode");
-            
+            const icon = themeToggleBtn.querySelector("i");
             if (document.body.classList.contains("dark-mode")) {
-                localStorage.setItem("theme", "dark");
-                themeIcon.classList.replace("bi-moon-stars-fill", "bi-sun-fill");
+                icon.className = "bi bi-sun";
             } else {
-                localStorage.setItem("theme", "light");
-                themeIcon.classList.replace("bi-sun-fill", "bi-moon-stars-fill");
+                icon.className = "bi bi-moon-stars";
             }
         });
     }
 
     const contactForm = document.getElementById("contactForm");
     if (contactForm) {
-        contactForm.addEventListener("submit", function (event) {
-            let isValid = true;
+        contactForm.addEventListener("submit", function (e) {
+            let passed = true;
+            const name = document.getElementById("clientName");
+            const email = document.getElementById("clientEmail");
+            const message = document.getElementById("clientMessage");
 
-            const nameInput = document.getElementById("clientName");
-            const emailInput = document.getElementById("clientEmail");
-            const messageInput = document.getElementById("clientMessage");
+            if (name.value.trim().length < 3) { name.classList.add("is-invalid"); passed = false; }
+            else { name.classList.remove("is-invalid"); name.classList.add("is-valid"); }
 
-            if (nameInput.value.trim().length < 3) {
-                nameInput.classList.add("is-invalid");
-                isValid = false;
-            } else {
-                nameInput.classList.remove("is-invalid");
-                nameInput.classList.add("is-valid");
-            }
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) { email.classList.add("is-invalid"); passed = false; }
+            else { email.classList.remove("is-invalid"); email.classList.add("is-valid"); }
 
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(emailInput.value.trim())) {
-                emailInput.classList.add("is-invalid");
-                isValid = false;
-            } else {
-                emailInput.classList.remove("is-invalid");
-                emailInput.classList.add("is-valid");
-            }
+            if (message.value.trim().length < 10) { message.classList.add("is-invalid"); passed = false; }
+            else { message.classList.remove("is-invalid"); message.classList.add("is-valid"); }
 
-            if (messageInput.value.trim().length < 10) {
-                messageInput.classList.add("is-invalid");
-                isValid = false;
-            } else {
-                messageInput.classList.remove("is-invalid");
-                messageInput.classList.add("is-valid");
-            }
-
-            if (!isValid) {
-                event.preventDefault();
-                event.stopPropagation();
-            } else {
-                event.preventDefault(); // Stop actual submit for demo purposes
-                alert("Thank you for your inquiry, Karl! The CoinKeeper team will reach out within 24 business hours.");
+            e.preventDefault();
+            if (passed) {
+                alert("Your consultation request has been logged securely. A private advisor will contact you shortly.");
                 contactForm.reset();
-                nameInput.classList.remove("is-valid");
-                emailInput.classList.remove("is-valid");
-                messageInput.classList.remove("is-valid");
             }
         });
     }
 
+    // FEATURE 3: DYNAMIC BUDGET FORECASTER
     const calcBtn = document.getElementById("calcBtn");
     if (calcBtn) {
         calcBtn.addEventListener("click", function () {
-            const monthlyIncome = parseFloat(document.getElementById("calcIncome").value);
-            const monthlyExpenses = parseFloat(document.getElementById("calcExpenses").value);
-            const savingsGoal = parseFloat(document.getElementById("calcGoal").value);
+            const inc = parseFloat(document.getElementById("calcIncome").value);
+            const exp = parseFloat(document.getElementById("calcExpenses").value);
+            const goal = parseFloat(document.getElementById("calcGoal").value);
+            const output = document.getElementById("calcFeedback");
 
-            const feedbackEl = document.getElementById("calcFeedback");
-
-            if (isNaN(monthlyIncome) || isNaN(monthlyExpenses) || isNaN(savingsGoal) || monthlyIncome <= 0) {
-                feedbackEl.className = "alert alert-danger mt-3";
-                feedbackEl.innerText = "Please input valid positive numerical metrics inside all fields.";
-                feedbackEl.classList.remove("d-none");
+            if (isNaN(inc) || isNaN(exp) || isNaN(goal)) {
+                output.className = "alert alert-danger mt-3";
+                output.innerText = "Please complete all luxury ledger variables accurately.";
+                output.classList.remove("d-none");
                 return;
             }
 
-            const netSavings = monthlyIncome - monthlyExpenses;
-
-            if (netSavings <= 0) {
-                feedbackEl.className = "alert alert-warning mt-3";
-                feedbackEl.innerText = "Your current operational expenses match or exceed income. Allocate funds to savings vectors immediately.";
+            const profit = inc - exp;
+            if (profit <= 0) {
+                output.className = "alert alert-warning mt-3";
+                output.innerText = "Your current operational spend matches or outpaces your inflow profile.";
             } else {
-                const monthsToGoal = Math.ceil(savingsGoal / netSavings);
-                feedbackEl.className = "alert alert-success mt-3";
-                feedbackEl.innerText = `Net Surplus: $${netSavings.toLocaleString()}/month. You will reach your target $${savingsGoal.toLocaleString()} configuration milestone in approximately ${monthsToGoal} months!`;
+                output.className = "alert alert-success mt-3" style="background-color: var(--olive-dark); color: white; border:none;";
+                output.innerText = `Net Allocation Strategy: $${profit.toLocaleString()}/mo. Targeted premium asset goal met in ${Math.ceil(goal / profit)} months.`;
             }
-            feedbackEl.classList.remove("d-none");
+            output.classList.remove("d-none");
         });
     }
 });
