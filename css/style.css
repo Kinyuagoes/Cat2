@@ -1,7 +1,4 @@
-/* ═══════════════════════════════════════════════
-   COINKEEPER — Global Stylesheet
-   Cyber-Neon Dark with Floating Elements
-═══════════════════════════════════════════════ */
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 :root {
@@ -17,7 +14,6 @@
     --transition-smooth: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-/* ── BASE ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html, body {
@@ -29,10 +25,6 @@ html, body {
     overflow-x: hidden;
 }
 
-/* ══════════════════════════════════════
-   BACKGROUND IMAGE LAYER
-   Subtle — visible but NOT dominant
-══════════════════════════════════════ */
 .page-bg {
     position: fixed;
     inset: 0;
@@ -40,14 +32,12 @@ html, body {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    /* Deep overlay: image tinted dark so content always wins */
-    opacity: 0.13;          /* Low opacity — texture not distraction */
+   
+    opacity: 0.13;         
     filter: saturate(0.6) brightness(0.7);
     pointer-events: none;
-    transform: scale(1.04); /* slight zoom hides hard edges */
+    transform: scale(1.04); 
 }
-
-/* A second gradient overlay on top of the image for depth */
 .page-bg-overlay {
     position: fixed;
     inset: 0;
@@ -61,10 +51,6 @@ html, body {
 /* All real content above bg layers */
 nav, main, footer, .float-layer { position: relative; z-index: 2; }
 
-/* ══════════════════════════════════════
-   FLOATING PARTICLE LAYER
-   Ambient glowing orbs & floating icons
-══════════════════════════════════════ */
 .float-layer {
     position: fixed;
     inset: 0;
@@ -73,7 +59,6 @@ nav, main, footer, .float-layer { position: relative; z-index: 2; }
     overflow: hidden;
 }
 
-/* Generic floating orb */
 .float-orb {
     position: absolute;
     border-radius: 50%;
@@ -90,7 +75,6 @@ nav, main, footer, .float-layer { position: relative; z-index: 2; }
     100% { transform: translateY(0px) translateX(0px) scale(1); }
 }
 
-/* Floating Icon Badges */
 .float-badge {
     position: absolute;
     background: rgba(31, 26, 66, 0.7);
@@ -123,7 +107,6 @@ nav, main, footer, .float-layer { position: relative; z-index: 2; }
 .dot-purple { background: var(--neon-purple); box-shadow: 0 0 6px var(--neon-purple); }
 .dot-blue   { background: var(--neon-blue); box-shadow: 0 0 6px var(--neon-blue); }
 
-/* Floating mini-card chip */
 .float-chip {
     position: absolute;
     background: linear-gradient(135deg, rgba(131,56,236,0.35), rgba(0,245,212,0.2));
@@ -143,9 +126,6 @@ nav, main, footer, .float-layer { position: relative; z-index: 2; }
     50%       { transform: rotate(2deg) translateY(-10px); }
 }
 
-/* ══════════════════════════════════════
-   IN-PAGE CONTENT IMAGE
-══════════════════════════════════════ */
 .page-content-img {
     width: 100%;
     height: 200px;
@@ -155,8 +135,6 @@ nav, main, footer, .float-layer { position: relative; z-index: 2; }
     border: 1px solid rgba(255,255,255,0.09);
     box-shadow: 0 12px 40px rgba(0,0,0,0.5);
 }
-
-/* ── GLASS PANEL ── */
 .glass-panel {
     background: var(--bg-card-glass);
     backdrop-filter: blur(16px);
@@ -164,8 +142,6 @@ nav, main, footer, .float-layer { position: relative; z-index: 2; }
     border: 1px solid rgba(255, 255, 255, 0.07);
     border-radius: 24px;
 }
-
-/* ── BUTTONS ── */
 .btn-neon-purple {
     background: var(--neon-purple);
     color: var(--text-white);
@@ -183,7 +159,6 @@ nav, main, footer, .float-layer { position: relative; z-index: 2; }
     transform: translateY(-2px);
     box-shadow: 0 14px 32px rgba(131,56,236,0.55);
 }
-
 .btn-outline-neon {
     background: transparent;
     color: var(--text-white);
@@ -199,8 +174,6 @@ nav, main, footer, .float-layer { position: relative; z-index: 2; }
     color: var(--neon-cyan);
     box-shadow: 0 0 18px rgba(0,245,212,0.22);
 }
-
-/* ── NAVBAR ── */
 .navbar-cyber {
     background-color: rgba(13, 11, 30, 0.88) !important;
     backdrop-filter: blur(24px);
@@ -224,8 +197,6 @@ nav, main, footer, .float-layer { position: relative; z-index: 2; }
 }
 .navbar-cyber .nav-link:hover,
 .navbar-cyber .nav-link.active { color: var(--text-white) !important; }
-
-/* ── TABS ── */
 .cyber-tabs { border-bottom: 2px solid rgba(255,255,255,0.05); }
 .cyber-tab-link {
     color: var(--text-muted-purple);
@@ -243,8 +214,6 @@ nav, main, footer, .float-layer { position: relative; z-index: 2; }
     background: var(--neon-cyan);
     box-shadow: 0 0 10px var(--neon-cyan);
 }
-
-/* ── CREDIT CARD ── */
 .premium-card-asset {
     background: var(--grad-wallet);
     border-radius: 24px;
@@ -261,8 +230,6 @@ nav, main, footer, .float-layer { position: relative; z-index: 2; }
     width: 100%; height: 100%;
     background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 60%);
 }
-
-/* ── WAVE GRAPH ── */
 .wave-graph-container {
     height: 200px;
     position: relative;
@@ -271,8 +238,6 @@ nav, main, footer, .float-layer { position: relative; z-index: 2; }
     overflow: hidden;
 }
 .wave-line { stroke: var(--neon-cyan); stroke-width: 3.5; fill: none; }
-
-/* ── FORMS ── */
 .form-cyber-input {
     background: rgba(255,255,255,0.04) !important;
     border: 1px solid rgba(255,255,255,0.1) !important;
@@ -287,15 +252,11 @@ nav, main, footer, .float-layer { position: relative; z-index: 2; }
     outline: none;
 }
 .form-cyber-input::placeholder { color: var(--text-muted-purple); }
-
-/* ── STARTUP PULSE ── */
 .pulse-glow { animation: cyber-pulse 2.4s ease-in-out infinite alternate; }
 @keyframes cyber-pulse {
     0%   { transform: scale(1);    filter: drop-shadow(0 0 14px rgba(0,245,212,0.4)); }
     100% { transform: scale(1.04); filter: drop-shadow(0 0 28px rgba(131,56,236,0.7)); }
 }
-
-/* ── TRANSACTION ROW ── */
 .transaction-row {
     background: rgba(255,255,255,0.03);
     border-radius: 18px; padding: 16px; margin-bottom: 12px;
@@ -307,8 +268,6 @@ nav, main, footer, .float-layer { position: relative; z-index: 2; }
     border-color: rgba(255,255,255,0.06);
     transform: scale(1.01);
 }
-
-/* ── ACCORDION (FAQ) ── */
 .accordion-button:not(.collapsed) {
     background: transparent !important;
     color: var(--neon-cyan) !important;
@@ -316,8 +275,6 @@ nav, main, footer, .float-layer { position: relative; z-index: 2; }
 }
 .accordion-button:focus { box-shadow: none !important; }
 .accordion-button::after { filter: invert(1) brightness(2); }
-
-/* ── FOOTER ── */
 footer {
     border-top: 1px solid rgba(255,255,255,0.05);
     padding: 24px 0;
