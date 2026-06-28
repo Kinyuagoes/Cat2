@@ -1,72 +1,89 @@
 document.addEventListener("DOMContentLoaded", function () {
-    
-    // FEATURE 1: WALLET INTERACTIVE TAB MANAGEMENT
+
+    /* ── TAB SWITCHING ── */
     const tabLinks = document.querySelectorAll(".cyber-tab-link");
     tabLinks.forEach(tab => {
         tab.addEventListener("click", function (e) {
             e.preventDefault();
             tabLinks.forEach(t => t.classList.remove("active"));
             this.classList.add("active");
-            
-            // Dynamic swap simulated action
-            const viewName = this.innerText.trim();
-            console.log(`Switching view segment to: ${viewName}`);
         });
     });
 
-    // FEATURE 2: CYBER CONTACT VALIDATION ROUTINE
+    /* ── CONTACT FORM VALIDATION ── */
     const contactForm = document.getElementById("contactForm");
     if (contactForm) {
         contactForm.addEventListener("submit", function (e) {
+            e.preventDefault();
             let isValid = true;
-            const name = document.getElementById("clientName");
-            const email = document.getElementById("clientEmail");
+            const name    = document.getElementById("clientName");
+            const email   = document.getElementById("clientEmail");
             const message = document.getElementById("clientMessage");
 
-            if (name.value.trim().length < 3) { name.classList.add("is-invalid"); isValid = false; }
-            else { name.classList.remove("is-invalid"); name.classList.add("is-valid"); }
+            [name, email, message].forEach(el => el.classList.remove("is-invalid","is-valid"));
 
-            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) { email.classList.add("is-invalid"); isValid = false; }
-            else { email.classList.remove("is-invalid"); email.classList.add("is-valid"); }
+            if (name.value.trim().length < 3)
+                { name.classList.add("is-invalid"); isValid = false; }
+            else name.classList.add("is-valid");
 
-            if (message.value.trim().length < 10) { message.classList.add("is-invalid"); isValid = false; }
-            else { message.classList.remove("is-invalid"); message.classList.add("is-valid"); }
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim()))
+                { email.classList.add("is-invalid"); isValid = false; }
+            else email.classList.add("is-valid");
 
-            e.preventDefault();
+            if (message.value.trim().length < 10)
+                { message.classList.add("is-invalid"); isValid = false; }
+            else message.classList.add("is-valid");
+
             if (isValid) {
-                alert("Secure encrypted routing established. Your message has been sent directly to node logs.");
+                alert("Secure encrypted routing established. Your message has been transmitted.");
                 contactForm.reset();
+                [name, email, message].forEach(el => el.classList.remove("is-valid"));
             }
         });
     }
 
-    // FEATURE 3: DYNAMIC LEDGER FORECASTER
+    /* ── LEDGER FORECASTER ── */
     const calcBtn = document.getElementById("calcBtn");
     if (calcBtn) {
         calcBtn.addEventListener("click", function () {
-            const income = parseFloat(document.getElementById("calcIncome").value);
+            const income   = parseFloat(document.getElementById("calcIncome").value);
             const expenses = parseFloat(document.getElementById("calcExpenses").value);
-            const goal = parseFloat(document.getElementById("calcGoal").value);
+            const goal     = parseFloat(document.getElementById("calcGoal").value);
             const feedback = document.getElementById("calcFeedback");
 
             if (isNaN(income) || isNaN(expenses) || isNaN(goal)) {
-                feedback.className = "alert alert-danger mt-3 bg-dark text-danger border-danger";
-                feedback.innerText = "Error: Input fields contain malformed parameters.";
+                feedback.className = "alert mt-3 border";
+                feedback.style.cssText = "background:rgba(220,53,69,0.15);border-color:rgba(220,53,69,0.4)!important;color:#ff6b6b;border-radius:14px;";
+                feedback.innerText = "Error: All input fields must contain valid numbers.";
                 feedback.classList.remove("d-none");
                 return;
             }
-
             const remainder = income - expenses;
             if (remainder <= 0) {
-                feedback.className = "alert alert-warning mt-3 bg-dark text-warning border-warning";
-                feedback.innerText = "Velocity Warning: Outflow equals or outpaces resource ingress metrics.";
+                feedback.className = "alert mt-3 border";
+                feedback.style.cssText = "background:rgba(255,193,7,0.12);border-color:rgba(255,193,7,0.4)!important;color:#ffc107;border-radius:14px;";
+                feedback.innerText = "Warning: Expenses meet or exceed income. Review your allocations.";
             } else {
-                feedback.className = "alert alert-success mt-3 text-white border-0";
-                feedback.style.background = "linear-gradient(90deg, #8338ec, #3a86ff)";
-                const targetMonths = Math.ceil(goal / remainder);
-                feedback.innerText = `Projection Complete: Yielding +$${remainder.toLocaleString()}/mo liquidity. Goal complete in ${targetMonths} months.`;
+                const months = Math.ceil(goal / remainder);
+                feedback.className = "alert mt-3 border-0 text-white";
+                feedback.style.cssText = "background:linear-gradient(90deg,#8338ec,#3a86ff);border-radius:14px;";
+                feedback.innerText = `Projection: +$${remainder.toLocaleString()}/mo surplus. Goal reached in ${months} month${months!==1?'s':''}.`;
             }
             feedback.classList.remove("d-none");
         });
     }
+
+    /* ── FLOATING BADGE STAGGER ── */
+    document.querySelectorAll('.float-badge').forEach((el, i) => {
+        el.style.animationDuration = (3 + i * 0.7) + 's';
+        el.style.animationDelay   = (i * 0.4) + 's';
+    });
+    document.querySelectorAll('.float-chip').forEach((el, i) => {
+        el.style.animationDuration = (4 + i * 0.9) + 's';
+        el.style.animationDelay   = (i * 0.6) + 's';
+    });
+    document.querySelectorAll('.float-orb').forEach((el, i) => {
+        el.style.animationDuration = (12 + i * 4) + 's';
+        el.style.animationDelay   = (i * 1.5) + 's';
+    });
 });
