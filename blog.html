@@ -3,55 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CoinKeeper | Journal Nodes</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/dist/min.css" rel="stylesheet">
+    <title>CoinKeeper | Journals</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark navbar-cyber sticky-top">
-        <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="Startup.html"><i class="bi bi-cpu me-2"></i>COINKEEPER</a>
-            <div class="collapse navbar-collapse">
-                <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item"><a class="nav-link" href="Startup.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">Architecture</a></li>
-                    <li class="nav-item"><a class="nav-link" href="features.html">Rituals</a></li>
-                    <li class="nav-item"><a class="nav-link" href="pricing.html">Tiers</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="blog.html">Journals</a></li>
-                    <li class="nav-item"><a class="nav-link" href="dashboard-preview.html">Ledger</a></li>
-                    <li class="nav-item"><a class="nav-link" href="faq.html">Specs</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Access</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+<div class="page-bg" style="background-image: url('assets/images/5.png');"></div>
+<div class="page-bg-overlay"></div>
 
-    <main class="container my-5 py-4">
-        <div class="mb-5">
-            <h1 class="fw-bold">Platform Chronicles</h1>
-        </div>
+<div class="float-layer">
+    <div class="float-orb" style="width:260px;height:260px;top:8%;right:-40px;background:radial-gradient(circle,#00f5d4,transparent);"></div>
+    <div class="float-orb" style="width:200px;height:200px;bottom:12%;left:-30px;background:radial-gradient(circle,#3a86ff,transparent);"></div>
 
-        <div class="row g-4">
-            <div class="col-md-6">
-                <div class="glass-panel p-4 h-100">
-                    <span class="small fw-bold" style="color:var(--neon-purple);">LOG // 4094</span>
-                    <h4 class="fw-bold my-3 text-white">Data Leak Prevention via Client-Side Storage</h4>
-                    <p class="text-muted-purple mb-0">An analysis covering modern methods for tracking multi-layered currency balances without writing to shared central cloud tracking systems.</p>
+    <div class="float-badge" style="top:18%;left:4%;">
+        <div class="dot dot-cyan"></div> New Entry: LOG 4094
+    </div>
+    <div class="float-badge" style="top:40%;right:4%;">
+        <div class="dot dot-blue"></div> Weekly Chronicles
+    </div>
+    <div class="float-badge" style="bottom:22%;right:5%;">
+        <div class="dot dot-purple"></div> Research Vault
+    </div>
+    <div class="float-chip" style="top:14%;right:20%;">JOURNAL</div>
+    <div class="float-chip" style="bottom:30%;left:18%;color:var(--neon-blue);">LOG // 2088</div>
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-dark navbar-cyber sticky-top">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="Startup.html"><i class="bi bi-cpu-fill"></i>COINKEEPER</a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMain"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navMain">
+            <ul class="navbar-nav ms-auto align-items-center gap-1">
+                <li class="nav-item"><a class="nav-link" href="Startup.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">Architecture</a></li>
+                <li class="nav-item"><a class="nav-link" href="features.html">Rituals</a></li>
+                <li class="nav-item"><a class="nav-link" href="pricing.html">Tiers</a></li>
+                <li class="nav-item"><a class="nav-link active" href="blog.html">Journals</a></li>
+                <li class="nav-item"><a class="nav-link" href="dashboard-preview.html">Ledger</a></li>
+                <li class="nav-item"><a class="nav-link" href="faq.html">Specs</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Access</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main class="container my-5 py-4">
+    <div class="mb-5">
+        <span class="fw-bold text-uppercase small d-block mb-2" style="color:var(--neon-cyan);letter-spacing:.15em;">Platform Chronicles</span>
+        <h1 class="display-5 fw-bold">Financial Journals</h1>
+    </div>
+
+    <!-- Featured image -->
+    <div class="mb-5">
+        <img src="assets/images/5.png" alt="Journal" class="page-content-img" style="height:240px;">
+    </div>
+
+    <div class="row g-4">
+        <div class="col-md-6">
+            <div class="glass-panel p-4 h-100">
+                <div class="d-flex align-items-center gap-2 mb-3">
+                    <span class="fw-bold" style="color:var(--neon-purple);font-size:.8rem;">LOG // 4094</span>
+                    <span class="badge" style="background:rgba(131,56,236,.2);color:var(--neon-purple);border-radius:10px;font-size:.7rem;">Security</span>
                 </div>
-            </div>
-            <div class="col-md-6">
-                <div class="glass-panel p-4 h-100">
-                    <span class="small fw-bold" style="color:var(--neon-cyan);">LOG // 2088</span>
-                    <h4 class="fw-bold my-3 text-white">The Psychology of Clean Micro-Ledger Sorting</h4>
-                    <p class="text-muted-purple mb-0">How simple visual indicators and bright cyan graph lines change how users view financial data entry habits.</p>
-                </div>
+                <h4 class="fw-bold text-white mb-3">Data Leak Prevention via Client-Side Storage</h4>
+                <p style="color:var(--text-muted-purple);font-size:.9rem;" class="mb-4">
+                    An analysis covering modern methods for tracking multi-layered currency balances without writing to shared central cloud tracking systems.
+                </p>
+                <a href="#" class="btn btn-outline-neon btn-sm px-4">Read Log</a>
             </div>
         </div>
-    </main>
+        <div class="col-md-6">
+            <div class="glass-panel p-4 h-100">
+                <div class="d-flex align-items-center gap-2 mb-3">
+                    <span class="fw-bold" style="color:var(--neon-cyan);font-size:.8rem;">LOG // 2088</span>
+                    <span class="badge" style="background:rgba(0,245,212,.15);color:var(--neon-cyan);border-radius:10px;font-size:.7rem;">UX Research</span>
+                </div>
+                <h4 class="fw-bold text-white mb-3">The Psychology of Clean Micro-Ledger Sorting</h4>
+                <p style="color:var(--text-muted-purple);font-size:.9rem;" class="mb-4">
+                    How visual indicators and bright cyan graph lines change user behaviour around financial data entry habits and retention.
+                </p>
+                <a href="#" class="btn btn-outline-neon btn-sm px-4">Read Log</a>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="glass-panel p-4 h-100">
+                <div class="d-flex align-items-center gap-2 mb-3">
+                    <span class="fw-bold" style="color:var(--neon-blue);font-size:.8rem;">LOG // 1021</span>
+                    <span class="badge" style="background:rgba(58,134,255,.15);color:var(--neon-blue);border-radius:10px;font-size:.7rem;">Engineering</span>
+                </div>
+                <h4 class="fw-bold text-white mb-3">Zero-Trust Architecture in Personal Finance Apps</h4>
+                <p style="color:var(--text-muted-purple);font-size:.9rem;" class="mb-4">
+                    Applying enterprise-grade zero-trust principles to consumer-level budgeting tools. Practical implementations and trade-offs.
+                </p>
+                <a href="#" class="btn btn-outline-neon btn-sm px-4">Read Log</a>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="glass-panel p-4 h-100">
+                <div class="d-flex align-items-center gap-2 mb-3">
+                    <span class="fw-bold" style="color:var(--neon-purple);font-size:.8rem;">LOG // 0891</span>
+                    <span class="badge" style="background:rgba(131,56,236,.2);color:var(--neon-purple);border-radius:10px;font-size:.7rem;">Design</span>
+                </div>
+                <h4 class="fw-bold text-white mb-3">Glassmorphism in High-Stakes Financial UI</h4>
+                <p style="color:var(--text-muted-purple);font-size:.9rem;" class="mb-4">
+                    When blur and transparency are trustworthy design choices and when they undermine the confidence a financial product must convey.
+                </p>
+                <a href="#" class="btn btn-outline-neon btn-sm px-4">Read Log</a>
+            </div>
+        </div>
+    </div>
+</main>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/dist/min.js"></script>
-    <script src="js/main.js"></script>
+<footer>© 2026 CoinKeeper Ledger Environment. All node logs secured locally.</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
