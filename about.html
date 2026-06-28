@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CoinKeeper | Architecture</title>
+    <title>CoinKeeper | About</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -13,22 +13,20 @@
 <div class="page-bg" style="background-image: url('assets/images/2.png');"></div>
 <div class="page-bg-overlay"></div>
 
-<!-- FLOATING LAYER -->
 <div class="float-layer">
     <div class="float-orb" style="width:300px;height:300px;top:10%;right:-60px;background:radial-gradient(circle,#3a86ff,transparent);"></div>
     <div class="float-orb" style="width:220px;height:220px;bottom:15%;left:-40px;background:radial-gradient(circle,#8338ec,transparent);"></div>
-
     <div class="float-badge" style="top:20%;right:4%;">
         <div class="dot dot-blue"></div> Client-Side Only
     </div>
     <div class="float-badge" style="top:45%;left:3%;">
-        <div class="dot dot-purple"></div> No Data Leakage
+        <div class="dot dot-purple"></div> Privacy-First Team
     </div>
     <div class="float-badge" style="bottom:22%;right:5%;">
-        <div class="dot dot-cyan"></div> Sandboxed Runtime
+        <div class="dot dot-cyan"></div> Founded 2024
     </div>
-    <div class="float-chip" style="top:15%;left:18%;color:var(--neon-blue);">ISOLATED</div>
-    <div class="float-chip" style="bottom:28%;right:18%;">AES-256</div>
+    <div class="float-chip" style="top:15%;left:18%;color:var(--neon-blue);">OUR STORY</div>
+    <div class="float-chip" style="bottom:28%;right:18%;">MISSION</div>
 </div>
 
 <nav class="navbar navbar-expand-lg navbar-dark navbar-cyber sticky-top">
@@ -38,73 +36,123 @@
         <div class="collapse navbar-collapse" id="navMain">
             <ul class="navbar-nav ms-auto align-items-center gap-1">
                 <li class="nav-item"><a class="nav-link" href="Startup.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link active" href="about.html">Architecture</a></li>
-                <li class="nav-item"><a class="nav-link" href="features.html">Rituals</a></li>
-                <li class="nav-item"><a class="nav-link" href="pricing.html">Tiers</a></li>
+                <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
                 <li class="nav-item"><a class="nav-link" href="blog.html">Journals</a></li>
                 <li class="nav-item"><a class="nav-link" href="dashboard-preview.html">Ledger</a></li>
                 <li class="nav-item"><a class="nav-link" href="faq.html">Specs</a></li>
-                <li class="nav-item"><a class="nav-link" href="contact.html">Access</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact Us</a></li>
             </ul>
         </div>
     </div>
 </nav>
 
 <main class="container my-5 py-4">
+
     <div class="text-center mb-5">
-        <span class="fw-bold text-uppercase small d-block mb-2" style="color:var(--neon-cyan);letter-spacing:.15em;">Decentralized Architecture</span>
-        <h1 class="display-5 fw-bold">Engineered for absolute isolation.</h1>
-        <p class="mt-3" style="color:var(--text-muted-purple);max-width:560px;margin:12px auto 0;">
-            Every computation runs in your local runtime. Nothing leaves your device.
+        <span class="fw-bold text-uppercase small d-block mb-2" style="color:var(--neon-cyan);letter-spacing:.15em;">Who We Are</span>
+        <h1 class="display-5 fw-bold">Built for privacy. Designed for clarity.</h1>
+        <p class="mt-3" style="color:var(--text-muted-purple);max-width:600px;margin:12px auto 0;">
+            CoinKeeper is a personal finance tracker that runs entirely inside your browser. No accounts, no cloud uploads, no surveillance — just a clean, fast ledger that belongs to you alone.
         </p>
     </div>
 
-    <!-- Content image -->
     <div class="mb-5">
-        <img src="assets/images/2.png" alt="Architecture" class="page-content-img" style="height:260px;">
+        <img src="assets/images/2.png" alt="About CoinKeeper" class="page-content-img" style="height:260px;">
     </div>
 
-    <div class="row g-4 align-items-stretch">
+    <div class="row g-4 mb-5">
         <div class="col-md-6">
             <div class="glass-panel p-4 h-100">
-                <div class="mb-3" style="color:var(--neon-cyan);font-size:2rem;"><i class="bi bi-hdd-network"></i></div>
-                <h4 class="fw-bold text-white mb-2">Client-Side Computation</h4>
-                <p style="color:var(--text-muted-purple);font-size:.9rem;">
-                    CoinKeeper runs complex matrix evaluations entirely on your local node. Asset logs stay separated from any central table, giving you unbroken personal control with zero external network traces.
+                <div class="mb-3" style="color:var(--neon-cyan);font-size:2rem;"><i class="bi bi-bullseye"></i></div>
+                <h4 class="fw-bold text-white mb-2">Our Mission</h4>
+                <p style="color:var(--text-muted-purple);font-size:.92rem;line-height:1.7;">
+                    To give every person a frictionless, private window into their own financial world. CoinKeeper runs entirely in your browser so your data never touches a server we own or operate. Every computation stays on your local node.
                 </p>
             </div>
         </div>
         <div class="col-md-6">
-            <div class="glass-panel p-4 h-100" style="border-color:rgba(58,134,255,.2)!important;">
-                <div class="mb-3" style="color:var(--neon-blue);font-size:2rem;"><i class="bi bi-shield-lock-fill"></i></div>
-                <h4 class="fw-bold text-white mb-2">System Hardening Matrix</h4>
-                <p style="color:var(--text-muted-purple);font-size:.9rem;">
-                    Sandboxed storage structures ensure all tracking states evaporate completely when an instance terminates — leaving no cached trails, cookies, or fingerprints behind.
+            <div class="glass-panel p-4 h-100" style="border-color:rgba(131,56,236,.25)!important;">
+                <div class="mb-3" style="color:var(--neon-purple);font-size:2rem;"><i class="bi bi-eye-slash-fill"></i></div>
+                <h4 class="fw-bold text-white mb-2">Our Vision</h4>
+                <p style="color:var(--text-muted-purple);font-size:.92rem;line-height:1.7;">
+                    A world where financial tools respect the user instead of monetising them. We are building toward a future where zero-knowledge interfaces are the standard — not the exception — for consumer finance software.
                 </p>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="glass-panel p-4 h-100 text-center">
-                <i class="bi bi-layers-fill fs-1 mb-3 d-block" style="color:var(--neon-purple);"></i>
-                <h6 class="fw-bold text-white">Layered Isolation</h6>
-                <p style="color:var(--text-muted-purple);font-size:.85rem;" class="mb-0">Three-tier data barrier between UI, logic, and storage.</p>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="glass-panel p-4 h-100 text-center">
-                <i class="bi bi-cpu fs-1 mb-3 d-block" style="color:var(--neon-cyan);"></i>
-                <h6 class="fw-bold text-white">In-Browser Engine</h6>
-                <p style="color:var(--text-muted-purple);font-size:.85rem;" class="mb-0">All calculations live inside your tab's JavaScript runtime.</p>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="glass-panel p-4 h-100 text-center">
-                <i class="bi bi-eye-slash-fill fs-1 mb-3 d-block" style="color:var(--neon-blue);"></i>
-                <h6 class="fw-bold text-white">Zero Telemetry</h6>
-                <p style="color:var(--text-muted-purple);font-size:.85rem;" class="mb-0">No analytics scripts. No tracking pixels. No server calls.</p>
             </div>
         </div>
     </div>
+
+    <h2 class="fw-bold text-center mb-4">How CoinKeeper Works</h2>
+    <div class="row g-4 mb-5">
+        <div class="col-md-4">
+            <div class="glass-panel p-4 h-100 text-center">
+                <i class="bi bi-hdd-network fs-1 mb-3 d-block" style="color:var(--neon-cyan);"></i>
+                <h6 class="fw-bold text-white mb-2">Client-Side Computation</h6>
+                <p style="color:var(--text-muted-purple);font-size:.85rem;margin:0;">All balance tracking and matrix evaluations run directly inside your browser tab. Nothing is sent outbound.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="glass-panel p-4 h-100 text-center">
+                <i class="bi bi-shield-lock-fill fs-1 mb-3 d-block" style="color:var(--neon-purple);"></i>
+                <h6 class="fw-bold text-white mb-2">Sandboxed Storage</h6>
+                <p style="color:var(--text-muted-purple);font-size:.85rem;margin:0;">Session data evaporates when you close the tab. No cookies, no fingerprints, no cached trails left behind.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="glass-panel p-4 h-100 text-center">
+                <i class="bi bi-cpu fs-1 mb-3 d-block" style="color:var(--neon-blue);"></i>
+                <h6 class="fw-bold text-white mb-2">Zero Telemetry</h6>
+                <p style="color:var(--text-muted-purple);font-size:.85rem;margin:0;">No analytics scripts, no tracking pixels, no server calls. The only external resource is Bootstrap for layout.</p>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="fw-bold text-center mb-4">The Team</h2>
+    <p class="text-center mb-5" style="color:var(--text-muted-purple);max-width:520px;margin:0 auto;">
+        CoinKeeper was built by a small team of developers and designers who believe your financial data belongs to you — and only you.
+    </p>
+    <div class="row g-4 justify-content-center mb-5">
+        <div class="col-md-4 col-lg-3">
+            <div class="glass-panel p-4 text-center h-100">
+                <div class="mx-auto mb-3 d-flex align-items-center justify-content-center rounded-circle"
+                     style="width:72px;height:72px;background:rgba(0,245,212,.12);border:2px solid rgba(0,245,212,.35);">
+                    <i class="bi bi-person-fill fs-2" style="color:var(--neon-cyan);"></i>
+                </div>
+                <h5 class="fw-bold text-white mb-1">Karl Kinyua</h5>
+                <span style="color:var(--neon-cyan);font-size:.8rem;font-weight:600;">Co-Founder · Lead Engineer</span>
+                <p style="color:var(--text-muted-purple);font-size:.82rem;margin-top:10px;margin-bottom:0;">Architected the client-side computation engine and sandboxed storage layer.</p>
+            </div>
+        </div>
+        <div class="col-md-4 col-lg-3">
+            <div class="glass-panel p-4 text-center h-100">
+                <div class="mx-auto mb-3 d-flex align-items-center justify-content-center rounded-circle"
+                     style="width:72px;height:72px;background:rgba(131,56,236,.12);border:2px solid rgba(131,56,236,.35);">
+                    <i class="bi bi-person-fill fs-2" style="color:var(--neon-purple);"></i>
+                </div>
+                <h5 class="fw-bold text-white mb-1">Kel Ochieng</h5>
+                <span style="color:var(--neon-purple);font-size:.8rem;font-weight:600;">Co-Founder · Product</span>
+                <p style="color:var(--text-muted-purple);font-size:.82rem;margin-top:10px;margin-bottom:0;">Shapes the product vision and ensures every feature puts user privacy first.</p>
+            </div>
+        </div>
+        <div class="col-md-4 col-lg-3">
+            <div class="glass-panel p-4 text-center h-100">
+                <div class="mx-auto mb-3 d-flex align-items-center justify-content-center rounded-circle"
+                     style="width:72px;height:72px;background:rgba(58,134,255,.12);border:2px solid rgba(58,134,255,.35);">
+                    <i class="bi bi-person-fill fs-2" style="color:var(--neon-blue);"></i>
+                </div>
+                <h5 class="fw-bold text-white mb-1">SantanaRose Masawa</h5>
+                <span style="color:var(--neon-blue);font-size:.8rem;font-weight:600;">Lead Designer · UX</span>
+                <p style="color:var(--text-muted-purple);font-size:.82rem;margin-top:10px;margin-bottom:0;">Designed the glassmorphic interface and crafted the visual language of CoinKeeper.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center mt-4">
+        <p style="color:var(--text-muted-purple);" class="mb-3">Want to get in touch with the team?</p>
+        <a href="contact-us.html" class="btn btn-neon-purple px-5 py-3 fw-bold">
+            <i class="bi bi-send me-2"></i>Write to Us
+        </a>
+    </div>
+
 </main>
 
 <footer>© 2026 CoinKeeper Ledger Environment. All node logs secured locally.</footer>
