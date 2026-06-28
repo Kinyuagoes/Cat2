@@ -3,126 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CoinKeeper | Secure Node</title>
+    <title>Visit Office | Contact</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/dist/min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- Cyber Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark navbar-cyber sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-luxury sticky-top">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="index.html">
-                <i class="bi bi-cpu me-2"></i>COINKEEPER
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContainer">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navContainer">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Dashboard</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">Architecture</a></li>
-                    <li class="nav-item"><a class="nav-link" href="features.html">Rituals</a></li>
-                    <li class="nav-item"><a class="nav-link" href="pricing.html">Tiers</a></li>
-                    <li class="nav-item"><a class="nav-link" href="blog.html">Journals</a></li>
-                    <li class="nav-item"><a class="nav-link" href="dashboard-preview.html">Ledger</a></li>
-                    <li class="nav-item"><a class="nav-link" href="faq.html">Specs</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Access</a></li>
-                    <a href="dashboard-preview.html" class="btn btn-neon-purple btn-sm ms-3">Launch Node</a>
+            <a class="navbar-brand d-flex align-items-center fw-bold" href="index.html" style="color: var(--gold-primary);"><i class="bi bi-suit-diamond me-2"></i>COINKEEPER</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Experiences</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="features.html">Ritual</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Insights</a></li>
+                    <li class="nav-item"><a class="nav-link" href="dashboard-preview.html">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html">Faq</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html">Visit</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Main Content Entry Frame -->
-    <main class="container my-5">
-        <div class="row g-4 justify-content-center">
-            
-            <!-- Left Panel: Balance Arc Tracker matching Screen 1 -->
-            <div class="col-lg-5">
-                <div class="glass-panel p-4 text-center h-100">
-                    <div class="d-flex justify-content-between align-items-center mb-4">
-                        <div class="text-start">
-                            <span class="text-muted small d-block">Welcome back!</span>
-                            <h5 class="fw-bold mb-0">Benjamin Johnson</h5>
-                        </div>
-                        <i class="bi bi-bell-fill text-muted fs-5"></i>
-                    </div>
-
-                    <!-- Ring Progress Section -->
-                    <div class="my-5">
-                        <div class="gauge-wrapper">
-                            <div class="gauge-ring"></div>
-                            <div class="gauge-center">
-                                <h2 class="fw-bold mb-0">$3,320.00</h2>
-                                <span class="small text-muted" style="font-size:0.75rem; letter-spacing:0.05em;">Available Balance</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="d-flex justify-content-center gap-3 mt-4">
-                        <a href="dashboard-preview.html" class="btn btn-neon-purple"><i class="bi bi-plus-lg me-2"></i>Add Inflow</a>
-                        <a href="features.html" class="btn btn-outline-neon">Analytics</a>
-                    </div>
+    <main class="container my-5 py-5" style="max-width: 600px;">
+        <div class="card-luxury p-5 shadow-sm">
+            <h2 class="fw-normal text-center mb-4" style="color: var(--olive-dark);">Schedule Private Session</h2>
+            <form id="contactForm" novalidate>
+                <div class="mb-3">
+                    <label class="form-label small fw-bold">Client Full Name</label>
+                    <input type="text" class="form-control bg-light py-2" id="clientName">
+                    <div class="invalid-feedback">Identification field must contain 3+ characters.</div>
                 </div>
-            </div>
-
-            <!-- Right Panel: Transaction Stream Overview -->
-            <div class="col-lg-7">
-                <div class="glass-panel p-4 h-100">
-                    <h5 class="fw-bold mb-4">My transactions</h5>
-
-                    <!-- Row Item: Amazon -->
-                    <div class="transaction-row d-flex align-items-center justify-content-between">
-                        <div class="d-flex align-items-center">
-                            <div class="bg-warning text-dark rounded-circle p-2 me-3 d-flex align-items-center justify-content-center" style="width:45px; height:45px;">
-                                <i class="bi bi-amazon fs-5"></i>
-                            </div>
-                            <div>
-                                <h6 class="mb-0 fw-bold">Amazon</h6>
-                                <span class="text-muted" style="font-size:0.75rem;">May 1, 2024</span>
-                            </div>
-                        </div>
-                        <span class="fw-bold text-white-50">-$103.22</span>
-                    </div>
-
-                    <!-- Row Item: McDonalds -->
-                    <div class="transaction-row d-flex align-items-center justify-content-between">
-                        <div class="d-flex align-items-center">
-                            <div class="bg-danger text-white rounded-circle p-2 me-3 d-flex align-items-center justify-content-center" style="width:45px; height:45px;">
-                                <i class="bi bi-egg-fried fs-5"></i>
-                            </div>
-                            <div>
-                                <h6 class="mb-0 fw-bold">McDonalds</h6>
-                                <span class="text-muted" style="font-size:0.75rem;">May 2, 2024</span>
-                            </div>
-                        </div>
-                        <span class="fw-bold text-white-50">-$133.33</span>
-                    </div>
-
-                    <!-- Row Item: Apple -->
-                    <div class="transaction-row d-flex align-items-center justify-content-between">
-                        <div class="d-flex align-items-center">
-                            <div class="bg-light text-dark rounded-circle p-2 me-3 d-flex align-items-center justify-content-center" style="width:45px; height:45px;">
-                                <i class="bi bi-apple fs-5"></i>
-                            </div>
-                            <div>
-                                <h6 class="mb-0 fw-bold">Apple</h6>
-                                <span class="text-muted" style="font-size:0.75rem;">May 8, 2024</span>
-                            </div>
-                        </div>
-                        <span class="fw-bold text-white-50">-$156.56</span>
-                    </div>
-
+                <div class="mb-3">
+                    <label class="form-label small fw-bold">Private Mail Coordinates</label>
+                    <input type="email" class="form-control bg-light py-2" id="clientEmail">
+                    <div class="invalid-feedback">Please check email syntax parameters.</div>
                 </div>
-            </div>
-
+                <div class="mb-3">
+                    <label class="form-label small fw-bold">Consultation Overview Strategy</label>
+                    <textarea class="form-control bg-light" id="clientMessage" rows="4"></textarea>
+                    <div class="invalid-feedback">Context explanation fields require 10+ characters minimum bounds.</div>
+                </div>
+                <button type="submit" class="btn btn-gold w-100 py-3 mt-3">Transmit Profile Pack</button>
+            </form>
         </div>
     </main>
 
-    <footer class="py-4 text-center mt-5 border-top border-dark">
-        <p class="small text-muted mb-0">&copy; 2026 CoinKeeper Ledger Environment Sync. Formatted with geometric cyber assets.</p>
+    <footer style="background-color: var(--spa-charcoal);" class="py-4 text-center text-white-50">
+        <p class="small mb-0">&copy; 2026 CoinKeeper Platform.</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/dist/min.js"></script>
